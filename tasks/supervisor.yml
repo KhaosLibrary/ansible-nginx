@@ -1,0 +1,6 @@
+---
+
+- name: enable nginx supervisor service
+  template:
+    src: supervisor/nginx.conf.j2
+    dest: /etc/supervisor/conf.d/nginx.conf

@@ -1,0 +1,8 @@
+---
+
+- name: setup nginx
+  include: nginx.yml
+
+- name: setup nginx supervisor service
+  include: supervisor.yml
+  when: khaos.container == true
