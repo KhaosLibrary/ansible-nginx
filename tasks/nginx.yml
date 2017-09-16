@@ -18,6 +18,8 @@
   vars:
     site: "{{ item.value }}"
   with_dict: "{{ khaos.nginx.site }}"
+  tags:
+   - configuration
 
 - name: enable nginx sites
   file:
@@ -25,5 +27,7 @@
     dest: /etc/nginx/sites-enabled/{{ item.key }}.conf
     state: link
   with_dict: "{{ khaos.nginx.site }}"
+  tags:
+   - configuration
 
 
