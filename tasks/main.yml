@@ -5,4 +5,4 @@
 
 - name: setup nginx supervisor service
   include: supervisor.yml
-  when: swinxy.container == true
+  when: container == true

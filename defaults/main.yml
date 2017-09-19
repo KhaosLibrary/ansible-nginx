@@ -1,3 +1,2 @@
 ---
-swinxy:
-  container: false
+container: false
